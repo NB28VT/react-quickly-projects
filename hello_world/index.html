@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <script src="js/react.js"></script>
+    <script src = "js/react-dom.js"></script>
+  </head>
+  <body>
+    <!-- Why Div? Avoid rendering React directly on body element, could conflict with other libraries -->
+    <div id="content">
+    </div>
+    <script type="text/javascript">
+      // createElement takes elementName (html or custom component), data (attrs), and child/innerHTML
+      var h1 = React.createElement('h1', null, 'Hello World!');
+      // h1 is not an actual HTML node yet. Use ReactDOM to render it on content id:
+      ReactDOM.render(h1, document.getElementById('content'));
+    </script>
+
+  </body>
+</html>
